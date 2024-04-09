@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <h1>Tax Calculator</h1>
+      <p>Calculate your taxes based on your income and deductions</p>
+    </header>
+    <form id="taxCalculatorForm">
+      <div class="input-group">
+        <label for="income">Enter gross annual income</label>
+        <p class="hidepara">Gross annual Income is your total salary in a year befor any deductions</p>
+        <div class="inside">
+          <input type="text" id="income" required placeholder="Enter gross annual income">
+          <span class="error-icon" id="incomeErrorIcon" title="">
+            <i class="fa fa-exclamation-circle" style="font-size:24px">
+              <p class="hidepara">Please Enter only numbers</p>
+            </i>
+          </span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="extraIncome">Enter extra income</label>
+        <div class="inside">
+          <input type="text" id="extraIncome" required placeholder="Enter extra income from other sources">
+          <span class="error-icon" id="extraIncomeErrorIcon" title="">
+            <i class="fa fa-exclamation-circle" style="font-size:24px">
+              <p class="hidepara">Please Enter only numbers</p>
+            </i>
+          </span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="age">Enter age group</label>
+        <div class="inside">
+          <select id="age" >
+            <option value="" disabled selected></option>
+            <option value="lessThan40">Less than 40</option>
+            <option value="40to60">40 to 60</option>
+            <option value="moreThan60">More than 60</option>
+          </select>
+          <span class="error-icon" id="ageErrorIcon" title="">
+            <i class="fa fa-exclamation-circle" style="font-size:24px">
+              <p class="hidepara">This field is Mandatory</p>
+            </i>
+          </span>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="deductions">Enter total applicable deductions</label>
+        <div class="inside">
+          <input type="text" id="deductions" required placeholder="Add total applicable deductions">
+          <span class="error-icon" id="deductionsErrorIcon" title="">
+            <i class="fa fa-exclamation-circle" style="font-size:24px">
+              <p class="hidepara">Please Enter only numbers</p>
+            </i>
+          </span>
+        </div>
+      </div>
+      <button type="submit" id="calculateButton">Calculate Tax</button>
+    </form>
+    <div class="modal" id="resultModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Calculated Tax</h2>
+        <p id="taxResult"></p>
+        <p id="payableAmount"></p>
+        <p class="smalltext">After tax deduction</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
