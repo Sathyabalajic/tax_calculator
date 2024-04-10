@@ -31,7 +31,7 @@ To run the Tax Calculation Application locally:
 ## Contact
 For any questions or feedback regarding the Tax Calculation Application, feel free to contact the project maintainer at [sathyabalajic697@gmail.com].
 ## Demo
-You can try out the Tax Calculation Application live [here](#) (provide the link if applicable).
+You can try out the Tax Calculation Application live [https://sathyabalajic.github.io/tax_calculator/].
 
 ## Screenshots
 ![Screenshot 1](screenshots/screenshot1.png)
